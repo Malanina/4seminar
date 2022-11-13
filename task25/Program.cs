@@ -5,13 +5,19 @@
 
 Console.Clear();
 Console.WriteLine("Введите число А");
-int A = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число B");
-int B = Convert.ToInt32(Console.ReadLine());
+int numberA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите  натуральное число B");
+int numberB = Convert.ToInt32(Console.ReadLine());
 int result = 1;
 
-for(int i = 0; i < B; i++)
+if (numberB > 0)
 {
-    result = result * A;
+    for (int i = 0; i < numberB; i++)
+    {
+        result = result * numberA;
+    }
+    Console.WriteLine("А в степени В равно: " + result);
 }
-Console.WriteLine("А в степени В равно: " + result);
+else
+    Console.WriteLine("Введите натуральное число В, т.е. число  должно быть больше нуля");
+
